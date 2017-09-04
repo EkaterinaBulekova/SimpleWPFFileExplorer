@@ -23,7 +23,7 @@ namespace WpfFileExplorer
         /// </summary>
         /// <param name="fullPath">The full path to the directory</param>
         /// <returns></returns>
-        public static List<DirectoryItem> GetDirectoryContents(string fullPath)
+        public static  List<DirectoryItem> GetDirectoryContents(string fullPath)
         {
             var items = new List<DirectoryItem>(); 
 

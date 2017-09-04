@@ -7,14 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
         <Grid>
-            <TreeView x:Name="FolderView" ItemsSource="{Binding Items}">
- 
+            <TreeView x:Name="FolderView" VirtualizingStackPanel.IsVirtualizing="True" ItemsSource="{Binding Items}">
                 <TreeView.ItemContainerStyle>
                     <Style TargetType="{x:Type TreeViewItem}">
                         <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
                     </Style>                    
                 </TreeView.ItemContainerStyle>
-
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate ItemsSource="{Binding Children}">
                         <StackPanel Orientation="Horizontal">
